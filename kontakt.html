@@ -33,11 +33,88 @@
 
 
 <main id="innehall">
-  <!-- kontakt - Susanne skriver här -->
+  <!-- kontaktsidan -->
 
+  <!-- KONTAKT: text vänster, formulär höger -->
+  <section class="sektion" aria-labelledby="kontakt-rubrik">
+    <div class="bild-text kontakt">
 
-  <!-- slut kontakt -->
+      <div>
+        <h1 id="kontakt-rubrik">Kontakt</h1>
+        <p>Har du en fråga eller vill du bara säga hej?<br> Vi svarar gärna.</p>
+        <p class="liten-text">Hör av dig</p>
+        <ul>
+            <li><strong>E-post:</strong> <a href="mailto:scandistudios@gmail.com">scandistudios@gmail.com</a></li>
+            <li><strong>Telefon:</strong> <a href="tel:+33171415883">0171 415 883</a></li>
+        </ul>
+        <ul>
+            <li><strong>Instagram:</strong> Scandistudios</li>
+            <li><strong>Facebook:</strong> Scandistudios</li>
+        </ul>
+        </div>
+
+      <div id="formular">
+        <h2>Skicka ett meddelande</h2>
+
+        <!-- OBS: ingen server här, så formuläret skickar till tack.html (GET). Byt action om gruppen väljer en formulärtjänst -->
+        <form action="tack.html" method="get">
+          <label>Namn
+            <input type="text" name="namn" autocomplete="name" required>
+          </label>
+
+          <label>E-post
+            <input type="email" name="epost" autocomplete="email" required>
+          </label>
+
+          <label>Vad gäller det?
+            <select name="amne" required>
+              <option value="">Välj ämne</option>
+              <option value="klasser-bokning">Klasser &amp; bokning</option>
+              <option value="medlemskap">Medlemskap</option>
+              <option value="event">Event</option>
+              <option value="samarbete">Samarbete</option>
+              <option value="ovrigt">Övrigt</option>
+            </select>
+          </label>
+
+          <label>Meddelande
+            <textarea name="meddelande" rows="6" required></textarea>
+          </label>
+
+          <button type="submit">Skicka</button>
+
+          <!-- TODO: integritetspolicy.html finns inte än, kolla med gruppen -->
+          <p>Genom att skicka formuläret godkänner du att vi behandlar dina uppgifter för att kunna svara dig. Läs mer i vår <a href="integritetspolicy.html">integritetspolicy</a>.</p>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- HITTA HIT -->
+  <section class="sektion beige" aria-labelledby="hittahit-rubrik">
+    <div class="bild-text">
+      <img src="img/lokal.webp" alt="Studions lokal med reformermaskiner">
+      <div>
+        <h2 id="hittahit-rubrik">Hitta hit</h2>
+        <address>
+          <p><strong>SCANDI STUDIOS</strong><br>
+          217 Boulevard Saint-Germain<br>
+          Paris, Frankrike
+        </address>
+      </p>
+          <strong>Öppettider</strong><br>
+          Måndag–fredag: 07–19<br>
+          Lördag–söndag: 10–15
+        </p>
+        <a class="knapp-ram" href="https://www.google.com/maps/search/?api=1&amp;query=217+Boulevard+Saint-Germain+Paris">Visa på karta</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- slut kontaktsidan -->
 </main>
+
 
 
 <!-- footer, också samma på alla sidor -->
